@@ -1,0 +1,19 @@
+{
+  "name": "projcomdlinenodejsaug24",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aferuza/webCralHttpsProjectJS"
+  },
+  "author": "feruza",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
