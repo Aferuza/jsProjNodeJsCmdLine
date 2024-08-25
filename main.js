@@ -19,7 +19,17 @@ async function main(){
     //console.log(process.argv);
     
     //invoke function crawlPage()
-    crawlPage(baseUrl);
+    //crawlPage(baseUrl);
+    //we will pass baseurl 2 times- as starting and current url and an empty object- since we havent crwled yet and obj will be filled up as we crawl
+
+    //crwalpage returns a Promise- I shd await for it!
+    const pages = await crawlPage(baseUrl, baseUrl,{});
+    //create a report of this - in repor file
+
+    for(const page of Object.entries(pages)){
+        console.log(pages);
+        
+    }
 }
 main();
 
