@@ -53,7 +53,7 @@ async function crawlPage(baseURL, currentUrl, pages){
         //can save html output into a variable
         const htmlBody= await resp.text();
         //extract all of the links from the html so we have more pages to crawl
-        const nextUrls = getURLsFromHTML(htmlBody, baseURL)
+        const nextUrls = getURLsFromHtml(htmlBody, baseURL)
 
         //now can iterate over the nextUrl
         for (const nextUrl of nextUrls){
@@ -88,7 +88,7 @@ async function crawlPage(baseURL, currentUrl, pages){
     
 }
 
-function getURLsFromHTML(htmlBody, baseURL){
+function getURLsFromHtml(htmlBody, baseURL){
   const urls = []
   const dom = new JSDOM(htmlBody)
   const aElements = dom.window.document.querySelectorAll('a')
@@ -121,6 +121,6 @@ function normalizeURL(url){
 
 module.exports = {
   normalizeURL,
-  getURLsFromHTML,
+  getURLsFromHtml,
   crawlPage,
 }
