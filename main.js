@@ -9,7 +9,7 @@ async function main(){
         
     }
     if(process.argv.length > 3){
-        console.log( "too manycmd line args");
+        console.log( "too many cmd line args");
         process.exit(1);
        
     }
@@ -22,10 +22,11 @@ async function main(){
     //crawlPage(baseUrl);
     //we will pass baseurl 2 times- as starting and current url and an empty object- since we havent crwled yet and obj will be filled up as we crawl
 
-    //crwalpage returns a Promise- I shd await for it!
-    const pages = await crawlPage(baseUrl, baseUrl,{});
+    //7. crawlpage returns a Promise- I shd await for it!
+    const pages = await crawlPage(baseUrl, baseUrl, {});
     //create a report of this - in repor file
 
+    //8. log in  the pages object
     for(const page of Object.entries(pages)){
         console.log(pages);
         
