@@ -2,9 +2,17 @@
 
 ## Project Overview
 
-This project is a web crawler that can fetch data from privided webpages, parse the content, and perform data extraction tasks such as finding links, finding/filtering specific information, and saving it to a local file or database.
+This project is a web crawler that can fetch data from a webpage, parse the content, and perform data extraction tasks such as finding links, finding/filtering specific information, and saving it to a local file or database.
 
-The project uses **Node.js** for the server-side functionality and **Jest** for unit testing. It's a great example of how to build a basic scraper and test it using modern JavaScript testing frameworks.
+The project is built with **JavaScript**, **Node.js** for the server-side functionality and **Jest** for unit testing.
+
+Web crawlers (web spiders) browse the web and collect data from websites. 
+
+Web crawlers perform the following:
+
+1. Fetch the HTML: The crawler sends an HTTP request to the server and downloads the HTML of the page.
+2. Parse the HTML: The HTML is parsed to extract links, text, metadata, and other content.
+3. Follow Links: The crawler follows the links found in the HTML to discover more pages.
 
 ## Features
 
